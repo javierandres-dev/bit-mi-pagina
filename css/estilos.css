@@ -48,6 +48,16 @@ h6 {
     font-weight: 100;
 }
 
+img {
+    width: 100%;
+    height: auto;
+}
+
+footer {
+    text-align: center;
+    padding-bottom: 2rem;
+}
+
 .texto-thin {
     font-family: "Fira Sans", sans-serif;
     font-weight: 100;
@@ -60,15 +70,24 @@ h6 {
     font-style: normal;
   }
 
+  .resaltar{
+    color: var(--color-secundario);
+}
+
+.atenuar{
+    opacity: 0.75;
+}
+
 .intro figure{
     text-align: center;
 }
 
-.intro figure img {
-    border-radius: 50%;
+.intro figure figcaption h6{
+font-style: italic;
 }
 
-.acerca-de {
+.acerca-de,
+.recetas {
     padding: 2rem;
 }
 
@@ -83,4 +102,67 @@ font-size: 2rem;
 
 .acerca-de table{
     margin: auto;
+}
+
+.disfruto h2,
+.disfruto p,
+.disfruto ul
+{
+    padding: 2rem;
+}
+
+.disfruto ul,
+.recetas ul,
+.recetas ol
+{
+    margin-left: 2rem;
+}
+
+.recetas{}
+
+@media screen and (min-width: 768px){
+    .mi-foto{
+        max-width: 225px;
+        border-radius: 50%;
+    }
+
+    .recetas-secciones{
+        display: flex;
+        justify-content: space-evenly;
+    }
+}
+
+@media screen and (min-width: 1024px){
+.disfruto-secciones{
+    display: flex;
+    align-items: center;
+}
+
+.disfruto-secciones figure,
+.disfruto-secciones div {
+    width: 50%;
+}
+
+.disfruto-secciones figure{
+    order: 1;
+}
+
+.disfruto-secciones figure img {
+    border-radius: 1rem 0 0 1rem;
+}
+
+.disfruto-secciones div {
+    order: 0;
+}
+}
+
+@media screen and (min-width: 1200px){
+    body {
+        max-width: 1024px;
+        margin: auto;
+    }
+
+    .disfruto-secciones figure img {
+        border-radius: 2rem;
+    }
 }
